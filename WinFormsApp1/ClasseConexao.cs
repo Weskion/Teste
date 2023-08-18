@@ -22,15 +22,20 @@ namespace WinFormsApp1
             //e retornado o SqlConnection que mantem a conexão
             return con;
         }
+        //função que permite o login do usuario
         public DataTable Login_usuario(string sql)
         {
+            //o objeto DataTable que receberá os dados da tabela no banco de dados é criada
             DataTable tabela = new DataTable();
+            //conexão com o banco de dados é aberta
             SqlConnection conectar = Conexao();
+            //o objeto script executará o comando sql usando como parâmetros a varíavel de texto sql (onde esta o comando) e os dados da conexão, armazenados em conectar
             SqlDataAdapter script = new SqlDataAdapter(sql, conectar);
+            //o objeto tabela sera preenchido com o retorno obtido pelo script
             script.Fill(tabela);
-
+            //a conexão é fechada
             conectar.Close();
-
+            //é retornado a tabela com os dados do banco
             return tabela;
         }
         public string Cadastrar_usuario(string nome, string email, string senha)

@@ -35,5 +35,15 @@ namespace WinFormsApp1
             tboxemail.Text = "";
             tboxsenha.Text = "";
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            //var form3 se torna uma classe interna da classe Form3 (classe do formulário login)
+            var form3 = new Form3();
+            //o formulario é escondido
+            this.Hide();
+            //abre o formulario form3 como uma caixa de diálogo
+            form3.ShowDialog();
+        }
     }
 }

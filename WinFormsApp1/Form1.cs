@@ -6,6 +6,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+        public string nome_usuario;
         //array publico onde serão contidos todos os números impares de 0 a 1000
         public static int[] impar = new int[1000];
         //função contida no botão somar

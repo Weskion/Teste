@@ -47,6 +47,7 @@
             btnlogin.TabIndex = 0;
             btnlogin.Text = "Login";
             btnlogin.UseVisualStyleBackColor = true;
+            btnlogin.Click += btnlogin_Click;
             // 
             // tboxsenha
             // 
